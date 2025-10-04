@@ -14,7 +14,6 @@ const LandingPage = () => {
       <Header />
       <HeroSection />
       <SocialStats />
-      <SocialStats />
       <VideoReels />
       <ServicesSection />
       <AboutCreator />

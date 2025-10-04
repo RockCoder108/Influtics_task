@@ -3,7 +3,7 @@ import logo from "../../../assets/logo.svg"
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 w-full z-50 px-4 sm:px-6 lg:px-8">
+    <header className="fixed top-0 left-0 w-full z-50  sm:px-6 lg:px-8">
       <div className="container mx-auto">
         <div className="bg-white/60 backdrop-blur-lg flex items-center justify-between h-20 px-8 rounded-bl-[15px] rounded-br-[15px]">
           <a href="#" className="flex items-center space-x-3">
