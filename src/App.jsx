@@ -1,12 +1,15 @@
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage/LandingPage";
 
 function App() {
-
   return (
-    <>
-      <h1>Task 2</h1>
-    </>
-  )
+    <Router>
+      <Routes>
+        {/* Public route */}
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;
