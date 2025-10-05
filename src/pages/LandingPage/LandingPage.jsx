@@ -8,6 +8,7 @@ import AboutCreator from "./components/AboutCreator";
 import ContactSection from "./components/ContactSection";
 import FooterSection from "./components/FooterSection";
 import ArticlesSection from "./components/ArticlesSection";
+import PremiumVideosSection from "./components/PremiumVideosSection";
 
 const LandingPage = () => {
   return (
@@ -18,6 +19,7 @@ const LandingPage = () => {
       <VideoReels />
       <ServicesSection />
       <AboutCreator />
+      <PremiumVideosSection />
       <ContactSection />
       <ArticlesSection />
       <FooterSection />
