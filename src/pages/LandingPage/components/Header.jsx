@@ -17,7 +17,7 @@ const Header = () => {
             <a href="#" className="text-gray-800 font-semibold hover:text-pink-500 transition-colors">Pages</a>
             <a href="#" className="text-gray-800 font-semibold hover:text-pink-500 transition-colors">Blog</a>
             <a href="#" className="text-gray-800 font-semibold hover:text-pink-500 transition-colors">Contact</a>
-            <button className="flex items-center px-6 py-3 text-white font-semibold bg-gradient-to-r from-orange-400 to-pink-600   hover:from-pink-600 hover:to-orange-400 rounded-[5px] transition-all">
+            <button className="flex items-center px-6 py-3 text-white font-semibold bg-gradient-to-r from-orange-400 to-pink-500 hover:from-pink-500 hover:to-orange-400 rounded-[5px] transition-all">
               + Follow Me
             </button>
           </nav>
