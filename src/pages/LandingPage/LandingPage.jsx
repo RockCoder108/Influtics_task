@@ -7,6 +7,7 @@ import ServicesSection from "./components/ServicesSection";
 import AboutCreator from "./components/AboutCreator";
 import ContactSection from "./components/ContactSection";
 import FooterSection from "./components/FooterSection";
+import ArticlesSection from "./components/ArticlesSection";
 
 const LandingPage = () => {
   return (
@@ -18,6 +19,7 @@ const LandingPage = () => {
       <ServicesSection />
       <AboutCreator />
       <ContactSection />
+      <ArticlesSection />
       <FooterSection />
     </div>
   );
