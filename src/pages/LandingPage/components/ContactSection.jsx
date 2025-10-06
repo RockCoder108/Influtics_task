@@ -9,20 +9,20 @@ import partner4 from "../../../assets/partner4.png";
 
 const ContactSection = () => {
   return (
-    <section className="overflow-hidden">
-      {/* TOP SECTION */}
+    <section className="relative overflow-hidden">
+      {/* 🔹 TOP SECTION */}
       <div
-        className="bg-cover bg-center py-24 md:py-32"
+        className="bg-cover bg-center pt-24 md:pt-28 relative"
         style={{ backgroundImage: `url(${contact_bg})` }}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-end gap-10">
-          {/* CONTACT FORM */}
-          <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 flex-1">
-            <img src={form_icon} alt="icon" className="w-10 mb-4" />
+        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 items-end gap-12">
+          {/* LEFT: Contact Form */}
+          <div className="relative h-full z-20 bg-white rounded-2xl shadow-[0_4px_70px_rgba(255,0,0,0.1)] p-2 md:p-2 -mb-32 lg:mb-0">
+            <img src={form_icon} alt="icon" className="w-12 mb-5" />
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Let’s Work Together on your next Project
             </h2>
-            <p className="text-gray-600 mb-6">
+            <p className="text-gray-600 mb-8">
               consectetur adipiscing elit. Donec non mattis nulla, in ultrices
               diam. Curabitur nec pharetra nunc. Nunc nec pellentesque nisl. Ut
               non mauris bibendum.
@@ -32,7 +32,7 @@ const ContactSection = () => {
               <div>
                 <label
                   htmlFor="name"
-                  className="block font-semibold text-gray-800 mb-2"
+                  className="block text-sm font-semibold text-gray-800 mb-2"
                 >
                   Your Name
                 </label>
@@ -47,7 +47,7 @@ const ContactSection = () => {
               <div>
                 <label
                   htmlFor="email"
-                  className="block font-semibold text-gray-800 mb-2"
+                  className="block text-sm font-semibold text-gray-800 mb-2"
                 >
                   Your Email Address
                 </label>
@@ -62,7 +62,7 @@ const ContactSection = () => {
               <div>
                 <label
                   htmlFor="message"
-                  className="block font-semibold text-gray-800 mb-2"
+                  className="block text-sm font-semibold text-gray-800 mb-2"
                 >
                   Write Message
                 </label>
@@ -82,33 +82,35 @@ const ContactSection = () => {
             </form>
           </div>
 
-          {/* IMAGE */}
-          <div className="hidden md:block flex-1 relative">
-            <div className="absolute -top-10 left-1/2 -translate-x-1/2 w-[550px] h-[550px] rounded-full border border-white/50 bg-white/20 blur-xl animate-pulse"></div>
+          {/* RIGHT: Floating Image + Rings */}
+          <div className="hidden lg:flex justify-center relative mt-0">
+            <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full border border-white/50 bg-white/20 opacity-50 animate-[ping_3s_linear_infinite]"></div>
+            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full border border-white/40 bg-white/10 opacity-40 animate-[ping_3s_linear_infinite_delay_1.5s]"></div>
             <img
               src={form_right}
               alt="Contact"
-              className="relative z-10 w-full max-w-md mx-auto"
+              className="relative z-10 w-[90%] max-w-md"
             />
           </div>
         </div>
       </div>
 
-      {/* BOTTOM SECTION */}
-      <div className="bg-[#FFF1F1] py-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <h5 className="text-center text-2xl font-semibold text-gray-900 mb-12">
-            Trusted Partners
-          </h5>
+      {/* 🔹 BOTTOM SECTION */}
+      <div className="bg-[#FFF1F1] pt-5 pb-5 lg:pt-5">
+        <div className="max-w-7xl mx-auto  lg:px-12 grid grid-cols-1 lg:grid-cols-2 items-center gap-12 text-center">
+          <h5 className="text-2xl font-semibold text-gray-900 mb-12"></h5>
 
-          <div className="flex gap-10 justify-center flex-wrap">
+          <div className="">
+            <h5 className="text-2xl font-semibold text-gray-900 mb-8 items-center">
+              Trusted Partners
+            </h5>
             {[partner1, partner2, partner3, partner4, partner1, partner2].map(
               (img, i) => (
                 <img
                   key={i}
                   src={img}
                   alt={`Partner ${i + 1}`}
-                  className="w-40 grayscale hover:grayscale-0 transition-all"
+                  className="w-12 md:w-12 transition-all duration-300 inline-block mx-4 mb-4"
                 />
               )
             )}
