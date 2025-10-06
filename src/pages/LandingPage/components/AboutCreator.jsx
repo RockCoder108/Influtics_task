@@ -65,14 +65,13 @@ const AboutCreator = () => {
               {features.map((item, idx) => (
                 <li
                   key={idx}
-                  className="relative pl-9 font-semibold"
-                  style={{
-                    backgroundImage: `url(${checkmark})`,
-                    backgroundPosition: "left 0.25rem top 0.25rem",
-                    backgroundRepeat: "no-repeat",
-                    backgroundSize: "20px 20px",
-                  }}
+                  className="relative pl-9 font-semibold text-white/90"
                 >
+                  <img
+                    src={checkmark}
+                    alt="checkmark"
+                    className="absolute left-0 top-1/2 transform -translate-y-1/2"
+                  />
                   {item}
                 </li>
               ))}
@@ -87,17 +86,17 @@ const AboutCreator = () => {
           </div>
 
           {/* Image */}
-          <div className="lg:w-1/2 relative flex justify-center lg:justify-end">
+          <div className="lg:w-1/2 relative flex justify-end lg:justify-end">
             <a
-              href="https://youtu.be/vc3WCrgYpF0?si=W2iFDfdDYsh6spKg"
-              className="absolute left-14 top-1/2 transform -translate-y-1/2 w-28 h-28 flex items-center justify-center rounded-full bg-white text-pink-500 shadow-[0_0_0_20px_rgba(255,255,255,0.5)] animate-pulse hover:bg-pink-500 hover:text-white transition"
+              href="https://youtu.be"
+              className="absolute left-14 top-1/2 transform -translate-y-1/2 w-28 h-28 flex items-center justify-center rounded-full bg-white text-red-500 shadow-[0_0_0_20px_rgba(255,255,255,0.5)] hover:bg-red-500 hover:text-white transition"
             >
               <FaPlay className="text-2xl" />
             </a>
             <img
               src={content_creator_intro}
               alt="intro"
-              className="rounded-l-full max-h-[35vw]"
+              className="rounded-l-full max-h-[35vw] ml-auto"
             />
           </div>
         </div>
@@ -106,7 +105,10 @@ const AboutCreator = () => {
         <img
           src={intro_vector}
           alt="vector"
-          className="absolute top-7 -left-[27rem] animate-spin-slow"
+          className="absolute top-7 -left-[32rem]"
+          style={{
+            animation: "spin 10s linear infinite",
+          }}
         />
       </section>
 
