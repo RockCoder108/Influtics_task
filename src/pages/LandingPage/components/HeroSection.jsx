@@ -115,17 +115,18 @@ const HeroSection = () => {
 
             {/* Follower Badge */}
             <div
-              className="absolute top-[30%] right-0 bg-no-repeat bg-contain text-center py-6 px-8"
+              className="absolute top-[25%] right-[-3%] bg-no-repeat bg-contain text-center flex flex-col items-center justify-center z-20"
               style={{
-                backgroundImage: `url(${banner_count})`,
-                backgroundSize: "contain",
-                backgroundPosition: "center",
+                width: "110px", // ✅ Set explicit width
+                height: "120px", // ✅ Set explicit height
+                
               }}
             >
-              <span className="block text-[#E91E63] font-bold text-3xl leading-none">
+              <img src={banner_count} alt="follower badge" className="w-full h-full absolute top-0 left-0 z-0" />
+              <span className="block text-[#E91E63] font-bold text-3xl leading-none z-10">
                 74K
               </span>
-              <span className="text-white text-sm font-medium">Followers</span>
+              <span className="text-black text-sm font-medium z-10">Followers</span>
             </div>
           </div>
         </div>
