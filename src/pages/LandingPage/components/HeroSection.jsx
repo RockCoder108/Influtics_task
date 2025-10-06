@@ -107,6 +107,8 @@ const HeroSection = () => {
             </div>
 
             {/* Main Image */}
+            <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full border border-white/90 bg-white/20 opacity-50 animate-[ping_3s_linear_infinite]"></div>
+            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-[400px] h-[400px] rounded-full border border-white/90 bg-white/30 opacity-40 animate-[ping_3s_linear_infinite]"></div>
             <img
               src={homeImg}
               alt="Linda"
@@ -119,14 +121,19 @@ const HeroSection = () => {
               style={{
                 width: "110px", // ✅ Set explicit width
                 height: "120px", // ✅ Set explicit height
-                
               }}
             >
-              <img src={banner_count} alt="follower badge" className="w-full h-full absolute top-0 left-0 z-0" />
+              <img
+                src={banner_count}
+                alt="follower badge"
+                className="w-full h-full absolute top-0 left-0 z-0"
+              />
               <span className="block text-[#E91E63] font-bold text-3xl leading-none z-10">
                 74K
               </span>
-              <span className="text-black text-sm font-medium z-10">Followers</span>
+              <span className="text-black text-sm font-medium z-10">
+                Followers
+              </span>
             </div>
           </div>
         </div>

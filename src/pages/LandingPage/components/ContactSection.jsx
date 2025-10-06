@@ -85,7 +85,7 @@ const ContactSection = () => {
           {/* RIGHT: Floating Image + Rings */}
           <div className="hidden lg:flex justify-center relative mt-0">
             <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full border border-white/50 bg-white/20 opacity-50 animate-[ping_3s_linear_infinite]"></div>
-            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full border border-white/40 bg-white/10 opacity-40 animate-[ping_3s_linear_infinite_delay_1.5s]"></div>
+            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-[500px] h-[500px] rounded-full border border-white/40 bg-white/10 opacity-40 animate-[ping_3s_linear_infinite]"></div>
             <img
               src={form_right}
               alt="Contact"
