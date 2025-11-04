@@ -17,7 +17,6 @@ const PremiumVideosSection = () => {
     >
       <img src={img} alt="Video Thumbnail" className="w-full object-cover" />
       <div className="absolute inset-5 flex flex-col justify-between">
-        {/* top controls */}
         <div className="flex justify-between">
           <a
             href="https://youtu.be/vc3WCrgYpF0?si=W2iFDfdDYsh6spKg"
@@ -32,7 +31,6 @@ const PremiumVideosSection = () => {
           )}
         </div>
 
-        {/* bottom info */}
         <div className="transform translate-y-[calc(100%-27px)] group-hover:translate-y-0 transition-all">
           <span className="inline-block bg-white text-pink-600 font-semibold text-xs px-3 py-1 rounded-full mb-2">
             {isPremium ? "$5.00" : "Free"}
@@ -47,7 +45,6 @@ const PremiumVideosSection = () => {
         </div>
       </div>
 
-      {/* overlay gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-pink-600/40 to-yellow-400 opacity-0 group-hover:opacity-100 transition-all"></div>
     </div>
   );
@@ -55,7 +52,6 @@ const PremiumVideosSection = () => {
   return (
     <section className="py-24 md:py-32 bg-white text-black overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
-        {/* Heading */}
         <div className="flex flex-wrap items-center justify-between gap-3 mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">
             My Latest Premium Videos
@@ -69,19 +65,37 @@ const PremiumVideosSection = () => {
         </div>
 
         {/* Slider 1 - Scroll Left */}
-        <div className="flex gap-6 animate-scroll-left">
+        <div className="scroll-animation flex gap-6 mb-10">
           {[...videosTop, ...videosTop].map((img) =>
             renderVideoCard(img, true)
           )}
         </div>
 
         {/* Slider 2 - Scroll Right */}
-        <div className="flex gap-6 mt-10 animate-scroll-right">
+        <div className="scroll-animation flex gap-6">
           {[...videosBottom, ...videosBottom].map((img, i) =>
             renderVideoCard(img, i !== 0)
           )}
         </div>
       </div>
+
+      {/* Add custom animation */}
+      <style jsx>{`
+        .scroll-animation {
+          display: flex;
+          width: max-content;
+          animation: scroll 10s linear infinite;
+        }
+
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </section>
   );
 };

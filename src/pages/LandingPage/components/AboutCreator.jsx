@@ -107,7 +107,7 @@ const AboutCreator = () => {
           alt="vector"
           className="absolute top-7 -left-[32rem]"
           style={{
-            animation: "spin 10s linear infinite",
+            animation: "slowspin 10s linear infinite",
           }}
         />
       </section>
